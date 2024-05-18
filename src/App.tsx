@@ -1,8 +1,11 @@
+import ChatPage from "./pages/ChatPage"
+import FileProvider from "./providers/FileProvider"
+
 function App() {
   return (
-    <div>
-      Hello World
-    </div>
+    <FileProvider>
+      <ChatPage />
+    </FileProvider>
   )
 }
 

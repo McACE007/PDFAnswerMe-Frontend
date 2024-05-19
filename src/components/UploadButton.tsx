@@ -8,15 +8,12 @@ export default function UploadButton() {
   const fileInputRef = useRef(null);
 
   const handleFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
-    console.log("sldkfjlksfdjlksdf")
     const file = e.target.files?.item(0);
     if (file?.type !== 'application/pdf') {
       toast.error("Please only upload a PDF file", { duration: 2000 })
       return
     }
-
-    if (file?.name) uploadFile(file)
-    else toast.error("Error")
+    uploadFile(file)
   };
 
   return (

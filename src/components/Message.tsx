@@ -3,7 +3,7 @@ type Props = {
   message: string;
 }
 
-export default function Chat({ imageUrl, message }: Props) {
+export default function Message({ imageUrl, message }: Props) {
   return (
     <div className="flex justify-center items-start space-x-[24px]">
       <img src={imageUrl} alt="Sender's Logo" height={40} width={40} />
